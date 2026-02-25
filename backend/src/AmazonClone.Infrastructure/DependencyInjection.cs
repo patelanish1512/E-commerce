@@ -18,9 +18,7 @@ namespace AmazonClone.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(
-                    configuration.GetConnectionString("DefaultConnection"),
-                    b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+                options.UseInMemoryDatabase("AmazonCloneDb"));
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -31,11 +29,7 @@ namespace AmazonClone.Infrastructure
 
             services.AddScoped<IIdentityService, IdentityService>();
 
-            services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = configuration.GetConnectionString("RedisConnection");
-                options.InstanceName = "AmazonClone_";
-            });
+            services.AddDistributedMemoryCache();
 
             services.AddDefaultAWSOptions(configuration.GetAWSOptions());
             services.AddAWSService<IAmazonS3>();

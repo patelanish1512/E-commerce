@@ -17,3 +17,4 @@ C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Infrastructure\obj\Debug\net
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Infrastructure\obj\Debug\net10.0\AmazonClone.Infrastructure.pdb
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Infrastructure\obj\Debug\net10.0\AmazonClone.Infrastructure.genruntimeconfig.cache
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Infrastructure\obj\Debug\net10.0\ref\AmazonClone.Infrastructure.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Infrastructure\obj\Debug\net10.0\AmazonClone.Infrastructure.sourcelink.json

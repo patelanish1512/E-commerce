@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kuVA0pwU00g=",
+  "dgSpecHash": "TXgokprRr9U=",
   "success": true,
   "projectFilePath": "C:\\ALL PROJECT\\Amazon clone\\backend\\src\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\patel\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.3\\microsoft.entityframeworkcore.abstractions.10.0.3.nupkg.sha512",
     "C:\\Users\\patel\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\10.0.3\\microsoft.entityframeworkcore.analyzers.10.0.3.nupkg.sha512",
     "C:\\Users\\patel\\.nuget\\packages\\microsoft.entityframeworkcore.design\\10.0.3\\microsoft.entityframeworkcore.design.10.0.3.nupkg.sha512",
+    "C:\\Users\\patel\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\10.0.3\\microsoft.entityframeworkcore.inmemory.10.0.3.nupkg.sha512",
     "C:\\Users\\patel\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\10.0.3\\microsoft.entityframeworkcore.relational.10.0.3.nupkg.sha512",
     "C:\\Users\\patel\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.3\\microsoft.entityframeworkcore.tools.10.0.3.nupkg.sha512",
     "C:\\Users\\patel\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\10.0.3\\microsoft.extensions.caching.abstractions.10.0.3.nupkg.sha512",

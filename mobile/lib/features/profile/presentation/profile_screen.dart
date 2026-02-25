@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
-class ProfileScreen extends StatelessWidget {
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../auth/presentation/auth_controller.dart';
+
+class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
 
     return Scaffold(
@@ -91,8 +93,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    // TODO: Logout logic via riverpod
-                    context.go('/login');
+                    ref.read(authProvider.notifier).logout();
                   },
                   child: const Text(
                     'Logout',

@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../features/auth/presentation/auth_controller.dart';
 
 // Provider for SharedPreferences instance
 final sharedPreferencesProvider = Provider<SharedPreferences>((ref) {
@@ -36,7 +37,7 @@ final dioProvider = Provider<Dio>((ref) {
       },
       onError: (e, handler) {
         if (e.response?.statusCode == 401) {
-          // TODO: Intercept Unauthorized and trigger logout / token clear
+          ref.read(authProvider.notifier).logout();
         }
         return handler.next(e);
       },

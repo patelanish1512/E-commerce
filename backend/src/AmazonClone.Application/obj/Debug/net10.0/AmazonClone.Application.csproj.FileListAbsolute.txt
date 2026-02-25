@@ -13,3 +13,4 @@ C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Application\obj\Debug\net10.
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Application\obj\Debug\net10.0\refint\AmazonClone.Application.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Application\obj\Debug\net10.0\AmazonClone.Application.pdb
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Application\obj\Debug\net10.0\ref\AmazonClone.Application.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Application\obj\Debug\net10.0\AmazonClone.Application.sourcelink.json
