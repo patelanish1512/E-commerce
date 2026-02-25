@@ -15,7 +15,6 @@ C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Amazon
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\AmazonClone.Api.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\AmazonClone.Api.pdb
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Humanizer.dll
-C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Microsoft.Build.Framework.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -130,7 +129,6 @@ C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\obj\Debug\net10.0\Amazon
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\obj\Debug\net10.0\AmazonClone.Api.genruntimeconfig.cache
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\obj\Debug\net10.0\ref\AmazonClone.Api.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\AutoMapper.dll
-C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\FluentValidation.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\MediatR.dll
@@ -144,3 +142,9 @@ C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Micros
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
 C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\AWSSDK.Core.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\AWSSDK.Extensions.NETCore.Setup.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\AWSSDK.S3.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Api\bin\Debug\net10.0\StackExchange.Redis.dll
