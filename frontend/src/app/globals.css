@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F9FAFB;
+  --foreground: #111827;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --primary: #1E1B4B;
+  /* Deep Luxury Indigo */
+  --primary-foreground: #FFFFFF;
+  --secondary: #6D28D9;
+  /* Royal Purple Accent */
+  --secondary-foreground: #FFFFFF;
+  --accent: #D4AF37;
+  /* Soft Gold Accent */
+  --accent-foreground: #0F172A;
+  --success: #059669;
+  /* Emerald Success */
+  --destructive: #DC2626;
+  /* Elegant Red */
+  --border: #E5E7EB;
+  --muted: #F3F4F6;
+  /* Soft Section Background */
+  --muted-foreground: #6B7280;
+  /* Secondary Text */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0F172A;
+    /* Dark Premium Background */
+    --foreground: #F9FAFB;
+    /* Off-white text */
+    --card: #1E293B;
+    /* Slate 800 for cards, slightly lighter than background */
+    --card-foreground: #FFFFFF;
+    --primary: #6D28D9;
+    /* Royal Purple */
+    --primary-foreground: #FFFFFF;
+    --secondary: #1E1B4B;
+    /* Deep Indigo */
+    --secondary-foreground: #FFFFFF;
+    --accent: #D4AF37;
+    /* Gold */
+    --accent-foreground: #0F172A;
+    --success: #059669;
+    --destructive: #DC2626;
+    --border: #334155;
+    --muted: #1E293B;
+    --muted-foreground: #9CA3AF;
+    /* Light Text */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 10px;
+}
