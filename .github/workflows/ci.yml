@@ -1,0 +1,105 @@
+name: Aura CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # -------------------------------------------------------------------------
+  # 1. Backend Build & Test (ASP.NET Core)
+  # -------------------------------------------------------------------------
+  backend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+          
+      - name: Restore dependencies
+        run: dotnet restore backend/AmazonClone.Api/AmazonClone.Api.csproj
+        
+      - name: Build
+        run: dotnet build backend/AmazonClone.Api/AmazonClone.Api.csproj --no-restore
+        
+      - name: Run Tests
+        run: dotnet test backend/AmazonClone.Api/AmazonClone.Api.csproj --no-build --verbosity normal
+
+  # -------------------------------------------------------------------------
+  # 2. Frontend Build & Test (Next.js)
+  # -------------------------------------------------------------------------
+  frontend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: Check ESLint & TypeScript
+        working-directory: ./frontend
+        run: |
+          npx eslint . --ext .ts,.tsx
+          npx tsc --noEmit
+
+      - name: Build Next.js
+        working-directory: ./frontend
+        run: npm run build
+
+  # -------------------------------------------------------------------------
+  # 3. Mobile Build & Analyze (Flutter)
+  # -------------------------------------------------------------------------
+  mobile-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+
+      - name: Install dependencies
+        working-directory: ./mobile
+        run: flutter pub get
+
+      - name: Analyze code
+        working-directory: ./mobile
+        run: flutter analyze
+
+      - name: Run tests
+        working-directory: ./mobile
+        run: flutter test
+
+      # Example Android Output
+      - name: Build Android APK
+        working-directory: ./mobile
+        run: flutter build apk --release
+
+  # -------------------------------------------------------------------------
+  # 4. Docker Deployment (Mocked)
+  # -------------------------------------------------------------------------
+  deploy:
+    needs: [backend-build, frontend-build, mobile-build]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log into Docker Hub (or ECR)
+        run: echo "Mocking Docker Login due to missing credentials"
+
+      - name: Build and Push Docker Images
+        run: echo "Mocking Docker Build & Push for api and frontend services"

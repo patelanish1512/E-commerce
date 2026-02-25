@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # --------------------------------------------------------------------------
+  # 1. Database Layer (PostgreSQL)
+  # --------------------------------------------------------------------------
+  db:
+    image: postgres:15-alpine
+    container_name: aura_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: aura_admin
+      POSTGRES_PASSWORD: SecurePassword123!
+      POSTGRES_DB: auradb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - aura_network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U aura_admin -d auradb" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --------------------------------------------------------------------------
+  # 2. Caching Layer (Redis)
+  # --------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: aura_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - aura_network
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --------------------------------------------------------------------------
+  # 3. Backend API (ASP.NET Core 8)
+  # --------------------------------------------------------------------------
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: aura_api
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=auradb;Username=aura_admin;Password=SecurePassword123!
+      - RedisCacheOptions__Configuration=redis:6379
+      - Jwt__Key=SuperSecretKeyForAuraProject123!@#
+      - Jwt__Issuer=AuraApi
+      - Jwt__Audience=AuraUsers
+    ports:
+      - "5000:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - aura_network
+
+  # --------------------------------------------------------------------------
+  # 4. Web Frontend (Next.js)
+  # --------------------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: aura_frontend
+    restart: always
+    environment:
+      - NEXT_PUBLIC_API_URL=http://api:8080/api
+    ports:
+      - "3000:3000"
+    depends_on:
+      api:
+        condition: service_started
+    networks:
+      - aura_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+
+networks:
+  aura_network:
+    driver: bridge

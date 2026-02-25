@@ -1,0 +1,12 @@
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\bin\Debug\net10.0\AmazonClone.Domain.deps.json
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\bin\Debug\net10.0\AmazonClone.Domain.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\bin\Debug\net10.0\AmazonClone.Domain.pdb
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\AmazonClone.Domain.csproj.AssemblyReference.cache
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\AmazonClone.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\AmazonClone.Domain.AssemblyInfoInputs.cache
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\AmazonClone.Domain.AssemblyInfo.cs
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\AmazonClone.Domain.csproj.CoreCompileInputs.cache
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\AmazonClone.Domain.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\refint\AmazonClone.Domain.dll
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\AmazonClone.Domain.pdb
+C:\ALL PROJECT\Amazon clone\backend\src\AmazonClone.Domain\obj\Debug\net10.0\ref\AmazonClone.Domain.dll
